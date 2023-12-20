@@ -34,6 +34,8 @@ function showSlides() {
     setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
 }
 
+//testing git branch
+
 showSlides();
 
 function submitForm() {
