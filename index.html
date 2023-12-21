@@ -6,29 +6,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
     <body>
-        <nav>
-            <img src="assets/logo.png" alt="Logo" class="logo" width="70" height="70">
-            <ul class="nav-items">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#our-profile">Our Profile</a></li>
-                <li><a href="#our-facilitation">Our Facilitation</a></li>
-                <li><a href="#message-us">Message Us</a></li>
-            </ul>
-        </nav>
-
-        <header>
-            <section id="home">
-                <h1>Hi <span id="username"></span>, Welcome to my our website</h1>
-                <h4>Please Enjoy</h4>
-                <div class="slideshow-container">
-                    <img class="mySlides" src="assets/pic1.jpeg">
-                    <img class="mySlides" src="assets/pic2.jpeg">
-                    <img class="mySlides" src="assets/pic3.jpeg">
-                    <img class="mySlides" src="assets/pic4.jpeg">
-                    <hr>
-                </div>
-            </section>           
+        <header class="header-wrapper">
+            <img class="logo" alt="revou-logo" src="assets/logo.png">
+            <div class="menu">
+                <button onclick="scrollToSection('home')">Home</button>
+                <button onclick="scrollToSection('our-profile')">Our Profile</button>
+                <button onclick="scrollToSection('our-facilitation')">Our Facilitation</button>
+                <button onclick="scrollToSection('message-us')">Message Us</button>
+            </div>
         </header>
+
+        <section id="home">
+            <h1>Hi <span id="username"></span>, Welcome to my our website</h1>
+            <h4>Please Enjoy</h4>
+            <div class="slideshow-container">
+                <img class="mySlides" src="assets/pic1.jpeg">
+                <img class="mySlides" src="assets/pic2.jpeg">
+                <img class="mySlides" src="assets/pic3.jpeg">
+                <img class="mySlides" src="assets/pic4.jpeg">
+                <hr>
+            </div>
+        </section>           
         
         <section id="our-profile" class="profile">
             <h2>Our Profile</h2>
