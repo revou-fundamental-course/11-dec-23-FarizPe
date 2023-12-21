@@ -47,14 +47,19 @@ function submitForm() {
 
     var nama = document.getElementById("Nama").value;
     var tanggalLahir = document.getElementById("tanggal_lahir").value;
-    var jenisKelamin = document.querySelector('input[name="jenis_kelamin"]:checked').value;
+    var jenisKelamin = document.querySelector('input[name="jenis_kelamin"]:checked');
     var pesan = document.getElementById("pesan").value;
+
+    if (nama.trim() === "" || tanggalLahir.trim() === "" || !jenisKelamin || pesan.trim() === "") {
+        alert("Harap isi semua field!");
+        return;
+    }
 
     var newRow = tableBody.insertRow();
     newRow.innerHTML = `
         <td>${nama}</td>
         <td>${tanggalLahir}</td>
-        <td>${jenisKelamin}</td>
+        <td>${jenisKelamin.value}</td>
         <td>${pesan}</td>
         <td class="icon-cell">
             <img src="assets/icon-trash.png" alt="Trash Icon" onclick="deleteRow(this)">
@@ -63,6 +68,7 @@ function submitForm() {
 
     form.reset();
 }
+
 
 function deleteRow(icon) {
     var row = icon.parentNode.parentNode;
