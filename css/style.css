@@ -4,13 +4,63 @@ body {
     padding: 0;
 }
 
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding: 15px 24px;
+}
+
+.header-wrapper > .menu {
+    display: flex;
+}
+
+.header-wrapper > .menu > button {
+    background-color: white;
+    padding: 8px 16px;
+    border: 2px solid gray;
+    cursor: pointer;
+    transition: 0.3s background-color ease-out;
+}
+
+.header-wrapper > .menu > button:hover {
+    background-color: gainsboro;
+}
+
+.header-wrapper > .menu > button:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.header-wrapper > .menu > button:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.header-wrapper > .logo {
+    width: auto;
+    height: 80px;
+}
+
 @media screen and (max-width: 600px) {
     body {
         margin: 0 5%;
     }
+
+    .header-wrapper {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
 }
 
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,9 +85,9 @@ nav {
 
 header {
     text-align: left;
-}
+} */
 
-header img {
+img {
     width: 100%;
     height: 500px;
     margin-bottom: 20px;
@@ -117,14 +167,14 @@ header img {
 main {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -10px; /* Memberikan jarak kiri kanan */
+    margin: 0 -10px; 
 }
 
 .left-section,
 .right-section {
     flex: 1;
     margin-bottom: 20px;
-    padding: 0 10px; /* Memberikan jarak kiri kanan */
+    padding: 0 10px;
 }
 
 form {
@@ -146,7 +196,7 @@ label {
 }
 
 .radio-label {
-    margin-left: 4px;
+    margin-left: 0;
 }
 
 input {
