@@ -126,7 +126,7 @@ img {
     padding: 20px;
     max-width: 300px;
     text-align: left;
-    margin: 0 auto; /* Pusatkan .contact */
+    margin: 0 auto; 
 }
 
 .contact h2 {
@@ -213,26 +213,76 @@ button {
     width: 100%;
 }
 
-table {
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 8px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.label {
+    align-self: center;
+}
+
+.gender-section {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.radio-label {
+    margin-left: 0;
+}
+
+input {
     width: 100%;
-    border-collapse: collapse;
+    align-self: flex-start;
 }
 
-thead {
-    background-color: #7e7b7b;
+#pesan {
+    height: 60px;
 }
 
-th,
-td {
+button {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.results-container {
     border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+    padding: 10px;
+    flex: 1;
 }
 
-.icon-cell {
-    text-align: center;
-    vertical-align: middle;
-    height: 40px;
+.result-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.result-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
 .icon-cell img {

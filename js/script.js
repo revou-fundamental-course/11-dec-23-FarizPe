@@ -41,9 +41,37 @@ function showSlides() {
 
 showSlides();
 
+// function submitForm() {
+//     var form = document.getElementById("messageForm");
+//     var tableBody = document.getElementById("dataTableBody");
+
+//     var nama = document.getElementById("Nama").value;
+//     var tanggalLahir = document.getElementById("tanggal_lahir").value;
+//     var jenisKelamin = document.querySelector('input[name="jenis_kelamin"]:checked');
+//     var pesan = document.getElementById("pesan").value;
+
+//     if (nama.trim() === "" || tanggalLahir.trim() === "" || !jenisKelamin || pesan.trim() === "") {
+//         alert("Harap isi semua field!");
+//         return;
+//     }
+
+//     var newRow = tableBody.insertRow();
+//     newRow.innerHTML = `
+//         <td>${nama}</td>
+//         <td>${tanggalLahir}</td>
+//         <td>${jenisKelamin.value}</td>
+//         <td>${pesan}</td>
+//         <td class="icon-cell">
+//             <img src="assets/icon-trash.png" alt="Trash Icon" onclick="deleteRow(this)">
+//         </td>
+//     `;
+
+//     form.reset();
+// }
+
 function submitForm() {
     var form = document.getElementById("messageForm");
-    var tableBody = document.getElementById("dataTableBody");
+    var resultsContainer = document.querySelector(".result-list");
 
     var nama = document.getElementById("Nama").value;
     var tanggalLahir = document.getElementById("tanggal_lahir").value;
@@ -55,18 +83,35 @@ function submitForm() {
         return;
     }
 
-    var newRow = tableBody.insertRow();
-    newRow.innerHTML = `
-        <td>${nama}</td>
-        <td>${tanggalLahir}</td>
-        <td>${jenisKelamin.value}</td>
-        <td>${pesan}</td>
-        <td class="icon-cell">
-            <img src="assets/icon-trash.png" alt="Trash Icon" onclick="deleteRow(this)">
-        </td>
+    // Menampilkan hasil form di dalam resultsContainer
+    var resultItem = document.createElement("li");
+    resultItem.classList.add("result-item");
+    resultItem.innerHTML = `
+        <p><strong>Nama:</strong> ${nama}</p>
+        <p><strong>Tanggal Lahir:</strong> ${tanggalLahir}</p>
+        <p><strong>Jenis Kelamin:</strong> ${jenisKelamin.value}</p>
+        <p><strong>Pesan:</strong> ${pesan}</p>
+        <p class="icon-cell">
+            <img src="assets/icon-trash.png" alt="Trash Icon" onclick="deleteResult(this)">
+        </p>
     `;
 
+    resultsContainer.appendChild(resultItem);
+
     form.reset();
+}
+
+// Fungsi untuk menghapus hasil form
+function deleteResult(element) {
+    var resultItem = element.closest(".result-item");
+    resultItem.remove();
+}
+
+
+// Fungsi untuk menghapus hasil form
+function deleteResult(element) {
+    var resultItem = element.closest(".result-item");
+    resultItem.remove();
 }
 
 

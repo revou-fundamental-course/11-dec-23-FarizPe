@@ -68,18 +68,18 @@
             </div>
         </section>
         <hr>
-        <section id="message-us">
-            <h2>Message Us</h2>
-            <main class="content">
-                <div class="left-section">
-                    <!-- Formulir Anda di sini -->
+
+        <section id="message-us">            
+            <main class="content main-content">
+                <div class="left-section form-container">
+                    <h2>Message Us</h2>
                     <form id="messageForm" action="#" method="post">
                         <label for="Nama">Nama:</label>
                         <input type="text" id="Nama" name="Nama">
-                        
+        
                         <label for="tanggal_lahir">Tanggal Lahir:</label>
                         <input type="date" id="tanggal_lahir" name="tanggal_lahir">
-
+        
                         <label for="jenis_kelamin">Jenis Kelamin:</label>
                         <div class="gender-section">
                             <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki">
@@ -87,39 +87,21 @@
                             <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
                             <label for="perempuan" class="radio-label">Perempuan</label>
                         </div>
-
-                        
+        
                         <label for="pesan">Pesan:</label>
                         <input type="text" id="pesan" name="pesan">
-                        
+        
                         <button type="button" onclick="submitForm()">Submit</button>
                     </form>
                 </div>
-
+        
                 <div class="right-section">
-                    <!-- Tabel Anda di sini -->
-                    <table id="dataTable">
-                        <thead>
-                            <tr>
-                                <th>Nama</th>
-                                <th>Tanggal Lahir</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Pesan</th>
-                                <th>Hapus</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dataTableBody">
-                            <tr>
-                                <td>Test1</td>
-                                <td>12 Januari 1996</td>
-                                <td>Laki-laki</td>
-                                <td>Belajar buat website</td>
-                                <td class="icon-cell">
-                                    <img src="assets/icon-trash.png" alt="Trash Icon" onclick="deleteRow(this)">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h2>Your Message:</h2>
+                    <div id="results" class="results-container">
+                        <ul class="result-list">
+                            
+                        </ul>
+                    </div>
                 </div>
             </main>
         </section>
