@@ -124,7 +124,7 @@ main {
 .right-section {
     flex: 1;
     margin-bottom: 20px;
-    padding: 0 10px; /* Memberikan jarak kiri kanan */
+    padding: 0 10px;
 }
 
 form {
